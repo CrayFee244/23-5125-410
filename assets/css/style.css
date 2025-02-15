@@ -106,7 +106,14 @@ body.active { overflow: hidden; }
 
 .section { padding-block: var(--section-padding); }
 
-.h1,
+.h1{
+  color: var(--sefety-orange);
+}
+
+.section-text {
+  color: var(--sefety-orange);
+}
+
 .h2,
 .h3,
 .h4 {
@@ -243,6 +250,11 @@ body.active { overflow: hidden; }
   z-index: 4;
 }
 
+.header {
+  background-color: var(--white);
+  box-shadow: var(--shadow-1);
+}
+
 .header.active {
   position: fixed;
   background-color: var(--white);
@@ -337,31 +349,30 @@ body.active { overflow: hidden; }
   height: 100vh;
 }
 
-.hero .hero-content .h1 {
+.hero .hero-content .h1 .section-text {
   color: var(--sefety-orange);
 }
 
-.hero .hero-content .section-text {
-  color: #000000;
-}
 
 .hero { padding-block-start: calc(var(--section-padding) + 90px); }
 
-.hero .container {
+.hero .container .section-text {
   display: grid;
-  gap: 40px;
+  gap: 10px;
 }
 
 .hero .section-text { margin-block: 25px 40px; }
 
-.hero-banner .w-100 {
+.hero-content .w-100 {
   max-width: 70%;
   margin-inline: auto;
 }
 
-.hero .shape {
-  bottom: -10px;
-  left: 10px;
+.hero-content {
+  width: 530px;
+  position: absolute;
+  top: 300px;
+  right: 8%;
 }
 
 
@@ -494,6 +505,8 @@ body.active { overflow: hidden; }
     grid-template-columns: 1fr 0.8fr;
     align-items: center;
   }
+
+
 
   .service .title-wrapper > * {
     max-width: calc(50% - 30px);
